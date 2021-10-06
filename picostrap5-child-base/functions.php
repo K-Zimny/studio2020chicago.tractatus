@@ -15,7 +15,7 @@ add_filter( 'wp_is_application_passwords_available', '__return_false' );
 //add_action( 'wp_enqueue_scripts',  function  () {	wp_enqueue_style( 'custom', get_stylesheet_directory_uri().'/custom.css' ); });
 
 // OPTIONAL ADDITIONAL JS FILE - just uncomment the row below
-//add_action( 'wp_enqueue_scripts', function() {	wp_enqueue_script('custom', get_stylesheet_directory_uri() . '/js/custom.js', array(/* 'jquery' */), null, true); });
+add_action( 'wp_enqueue_scripts', function() {	wp_enqueue_script('custom', get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery' ), null, true); });
  
 // OPTIONAL: ADD FONTAWESOME FROM CDN IN FOOTER 
 /* 

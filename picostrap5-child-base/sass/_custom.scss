@@ -163,6 +163,7 @@ li {
 /********** Site container widths ***********/
 
 .fixed-site-width,
+.fixed-1400-width,
 .fixed-1200-width,
 .fixed-900-width,
 footer {
@@ -170,6 +171,10 @@ footer {
   width: 92% !important;
   margin-left: auto !important;
   margin-right: auto !important;
+}
+
+.fixed-1400-width {
+  max-width: 1400px !important;
 }
 
 .fixed-1200-width {
@@ -182,6 +187,7 @@ footer {
 
 @media only screen and (max-width: 767px) {
   .fixed-site-width,
+  .fixed-1400-width,
   .fixed-1200-width,
   .fixed-900-width,
   footer {
@@ -804,4 +810,62 @@ footer {
   display: block;
   width: max-content;
   max-width: 75vw;
+}
+
+.homepage-btn {
+  font-size: 22px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.homepage-social svg {
+  width: 30px;
+}
+
+// Service Section
+
+.home-services-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.home-service-card {
+  flex-basis: 40%;
+  max-width: 400px;
+  min-width: 275px;
+  margin: 25px 25px;
+  padding: 25px 25px;
+  border: 1px solid var(--bs-primary);
+  background: transparent;
+  flex-grow: 1;
+}
+
+.animated-color-bg {
+  background: linear-gradient(
+    246deg,
+    #88c5a0,
+    #957456,
+    #4002be,
+    #efeee7,
+    #7b7eb1,
+    #b0e47b
+  );
+  background-size: 360% 360%;
+  animation: gradient-animation 30s ease infinite;
+  position: absolute;
+  inset: 0;
+  opacity: 0.3;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
